@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript/navbar.js"></script>
+</head>
+
+<body>
+    <div class="">
+        <div class="flex justify-around content-center p-7 bg-zinc-200 w-full">
+            <div class="max-h-max">
+                <img src="../images/images.jpeg" alt="" class="w-28 h-10" />
+            </div>
+
+            <div>
+                <ul class="text-lg font-serif text-gray-700 cursor-pointer" style="font-weight: bold">
+                    <li class="inline-block px-10 border-x border-black">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="inline-block px-10 border-r border-black relative" data-drop-down-container>
+                        Books &DownArrow;
+                        <ul class="transition-all z-50 opacity-0 absolute top-16 bg-zinc-200 text-gray-700 p-5 -left-2 border border-slate-400"
+                            data-drop-down>
+                            <li class="my-5 border-b-2 border-slate-400">
+                                academic section
+                            </li>
+                            <li class="border-b-2 border-slate-400">
+                                <a href="">physical books</a>
+                            </li>
+                            <li class="my-5 border-b-2 border-slate-400">
+                                <a href="">Ebooks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="inline-block px-10 border-r border-black">
+                        <a href="">About</a>
+                    </li>
+                    <li class="inline-block px-10 border-r border-black">
+                        <a href="/">contact</a>
+                    </li>
+                    <li class="inline-block px-10 border-black"><a href="/">faq</a></li>
+                    <li class="inline-block px-10 border-black relative" data-drop-down-container>
+                        account
+                        <ul class="transition-all z-50 opacity-0 absolute top-16 bg-zinc-200 text-gray-700 p-5 -left-2 border border-slate-400"
+                            data-drop-down>
+                            <li class="my-5 border-b-2 border-slate-400">
+                                <a href="">Login</a>
+                            </li>
+                            <li class="my-5 border-b-2 border-slate-400">
+                                <a href="">signup</a>
+                            </li>
+                            <li class="my-5 border-b-2 border-slate-400">
+                                <a href="">cart</a>
+                            </li>
+                            <li class="my-5 border-b-2 border-slate-400">
+                                <a href="">view Account </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class=" py-10" > -->
+            <center>
+                <div style="background-image: url(../images/bg1-category.png);" class="mb-2 p-10 mt-1">
+                    <div data-book-title class="capitalize text-4xl font-bold my-3 " style="letter-spacing: 2px;" data-book-title>
+                        the african triology
+                    </div>
+                    <div>
+                        <ul class="text-xl capitalize">
+                            <li class="inline-block mx-2">home ></li>
+                            <li class="inline-block" data-book-title> the african triology</li>
+                        </ul>
+                    </div>
+                </div>
+            </center>
+            <div class="flex max-w-full mt-2 px-20 py-20" style="background-image: url(../images/bg1-category.png);">
+                <div class="w-1/3  px-10" style="height: 70vh;">
+                    <img data-img src="../images/0310962.png" alt="" class="w-1/2 min-h-full min-w-full max-h-full border-2 border-gray-300">
+                </div>
+                <div class="w-2/3  ">
+                   <center>
+                    <div>
+                        <h3 class="text-3xl capitalize font-bold text-gray-600" style="letter-spacing: 1.4px;" data-book-title>the african triology</h3>
+                    </div>
+                   </center>
+                   <div class="mt-10">
+                    <ol class="text-xl text-gray-500" style="list-style-image:;line-height: 45px;">
+                        <li > >>Number of pages: <span data-pages></span></li>
+                        <li >>> Author: <span data-author></span></li>
+                        <li >>> publisher: <span data-publisher></span></li>
+                        <li >>> subtitle: <span data-subtitle></span></li>
+                        <li >>> year: <span data-year></span></li>
+                        <li >>> Description: <span data-description></span></li>
+                    </ol>
+                   </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+    <script type="module" src="./javascript/script.js"></script>
+</body>
+
+</html>

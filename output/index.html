@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="javascript/index.js" defer type="module"></script>
+  <script src="javascript/navbar.js" defer></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .lineclamping {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+    }
+
+    .currentslide {
+      animation: slide forwards 1s ease-in-out;
+    }
+
+    @keyframes slide {
+      from {
+        opacity: 0;
+        offset: 0;
+      }
+
+      to {
+        opacity: 1;
+        offset: -1;
+      }
+    }
+
+    .offslide {
+      animation: offslide forwards 1s ease-in-out;
+    }
+
+    @keyframes offslide {
+      from {}
+
+      to {
+        opacity: 1;
+        offset: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <div class="flex justify-around content-center p-7 bg-zinc-200 w-full">
+      <div class="max-h-max">
+        <img src="../images/images.jpeg" alt="" class="w-28 h-10" />
+      </div>
+
+      <div>
+        <ul class="text-lg font-serif text-gray-700 cursor-pointer" style="font-weight: bold">
+          <li class="inline-block px-10 border-x border-black">
+            <a href="/">Home</a>
+          </li>
+          <li class="inline-block px-10 border-r border-black relative" data-drop-down-container>
+            Books &DownArrow;
+            <ul
+              class="transition-all z-50 opacity-0 absolute top-16 bg-zinc-200 text-gray-700 p-5 -left-2 border border-slate-400"
+              data-drop-down>
+              <li class="my-5 border-b-2 border-slate-400">
+                academic section
+              </li>
+              <li class="border-b-2 border-slate-400">
+                <a href="">physical books</a>
+              </li>
+              <li class="my-5 border-b-2 border-slate-400">
+                <a href="">Ebooks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="inline-block px-10 border-r border-black">
+            <a href="">About</a>
+          </li>
+          <li class="inline-block px-10 border-r border-black">
+            <a href="/">contact</a>
+          </li>
+          <li class="inline-block px-10 border-black"><a href="/">faq</a></li>
+          <li class="inline-block px-10 border-black relative" data-drop-down-container>
+            account
+            <ul
+              class="transition-all z-50 opacity-0 absolute top-16 bg-zinc-200 text-gray-700 p-5 -left-2 border border-slate-400"
+              data-drop-down>
+              <li class="my-5 border-b-2 border-slate-400">
+                <a href="">Login</a>
+              </li>
+              <li class="my-5 border-b-2 border-slate-400">
+                <a href="">signup</a>
+              </li>
+              <li class="my-5 border-b-2 border-slate-400">
+                <a href="">cart</a>
+              </li>
+              <li class="my-5 border-b-2 border-slate-400">
+                <a href="">view Account </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="relative flex w-full overflow-x-hidden">
+      <div class="w-full h-64 max-h-96 object-cover min-w-full" data-slider style="
+            background-image: url(../images/0310961.png);
+            min-height: 24rem;
+          "></div>
+      <div class="w-full h-64 max-h-96 object-cover min-w-full" data-slider style="
+            background-image: url(../images/0310962.png);
+            min-height: 24rem;
+          "></div>
+      <div class="w-full h-64 max-h-96 object-cover min-w-full" data-slider style="
+            background-image: url(../images/0310963.png);
+            min-height: 24rem;
+          "></div>
+      <div class="w-full h-64 max-h-96 object-cover min-w-full" data-slider style="
+            background-image: url(../images/0310964.png);
+            min-height: 24rem;
+          "></div>
+
+      <div class="absolute top-52 text-black p-5 bg-white mx-5 rounded cursor-pointer">
+        <h1>
+          << /h1>
+      </div>
+      <div class="absolute right-0 top-52 text-black p-5 bg-white mx-5 rounded cursor-pointer">
+        <h1>></h1>
+      </div>
+
+      <div class="w-full absolute bottom-1 left-2/4">
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
+      </div>
+    </div>
+    <div class="text-center">
+      <center>
+        <h3
+          class="text-4xl m-12  relative after:border-2 after:border-orange-500 after:w-20 after:absolute  after:left-1/2 after:-bottom-2">
+          Featured Products</h3>
+      </center>
+
+      <div class="grid grid-cols-4 " style="grid-row-gap: 50px;" data-featured-books>
+        
+
+      </div>
+
+      <div class="flex" data->
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <template data-featured-books-template>
+    <div class=" h-72 m-10 border-2  rounded bg-gray-100 max-w-80  relative"
+    data-feauture-books-container>
+    <!-- <a href="" onclick=""> -->
+      <img src=""
+      class="w-full max-w-full  h-full min-h-full max-h-full  top-0 left-0 " data-image>
+    <!-- </a> -->
+    <div class="z-50 w-full top-full -mb-96">
+      <span class="text-gray-600 "> by</span>
+      <span class="text-gray-400 lineclamping " data-author>heliena</span>
+      <a href="" data-link class="bg-orange-600  text-white inline-block p-3 rounded">click to read</a>
+    </div>
+  </div>
+
+  </template>
+</body>
+
+</html>
