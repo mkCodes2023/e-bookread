@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript/navbar.js"></script>
+    <script src="javascript/navbar.js" defer></script>
 </head>
+<style>
+    * {
+        scroll-behavior: smooth;
+    }
+</style>
 
-<body>
+<body style="background-image: url(../images/bg1-category.png);">
+    <div class="fixed w-full h-full bg top-0 left-0  bg-gray-950 opacity-90 flex justify-center items-center text-white " data-preloader>...loading</div>
+
     <div class="">
         <div class="flex justify-around content-center p-7 bg-zinc-200 w-full">
             <div class="max-h-max">
@@ -65,41 +72,128 @@
             </div>
         </div>
         <!-- <div class=" py-10" > -->
-            <center>
-                <div style="background-image: url(../images/bg1-category.png);" class="mb-2 p-10 mt-1">
-                    <div data-book-title class="capitalize text-4xl font-bold my-3 " style="letter-spacing: 2px;" data-book-title>
-                        the african triology
-                    </div>
-                    <div>
-                        <ul class="text-xl capitalize">
-                            <li class="inline-block mx-2">home ></li>
-                            <li class="inline-block" data-book-title> the african triology</li>
-                        </ul>
-                    </div>
+        <center>
+            <div class=" p-10 mt-1 border-b-2 border-white">
+                <div data-book-title class="capitalize text-4xl font-bold my-3 " style="letter-spacing: 2px;"
+                    data-book-title>
+                    the african triology
                 </div>
-            </center>
-            <div class="flex max-w-full mt-2 px-20 py-20" style="background-image: url(../images/bg1-category.png);">
-                <div class="w-1/3  px-10" style="height: 70vh;">
-                    <img data-img src="../images/0310962.png" alt="" class="w-1/2 min-h-full min-w-full max-h-full border-2 border-gray-300">
-                </div>
-                <div class="w-2/3  ">
-                   <center>
-                    <div>
-                        <h3 class="text-3xl capitalize font-bold text-gray-600" style="letter-spacing: 1.4px;" data-book-title>the african triology</h3>
-                    </div>
-                   </center>
-                   <div class="mt-10">
-                    <ol class="text-xl text-gray-500" style="list-style-image:;line-height: 45px;">
-                        <li > >>Number of pages: <span data-pages></span></li>
-                        <li >>> Author: <span data-author></span></li>
-                        <li >>> publisher: <span data-publisher></span></li>
-                        <li >>> subtitle: <span data-subtitle></span></li>
-                        <li >>> year: <span data-year></span></li>
-                        <li >>> Description: <span data-description></span></li>
-                    </ol>
-                   </div>
+                <div>
+                    <ul class="text-xl capitalize">
+                        <li class="inline-block mx-2">home ></li>
+                        <li class="inline-block" data-book-title> the african triology</li>
+                    </ul>
                 </div>
             </div>
+        </center>
+        <div class="flex max-w-full mt-2 px-20 py-20">
+            <div class="w-1/3  px-10" style="height: 70vh;">
+                <img data-img src="../images/0310962.png" alt=""
+                    class="w-1/2 min-h-full min-w-full max-h-full border-2 border-gray-300">
+                <div class="text-gray-500 cursor-pointer">
+                    rate this book: <span class="text-2xl  " data-star data-star_number="1">&star;</span><span
+                        class="text-2xl " data-star_number="2" data-star>&star;</span> <span data-star_number="3"
+                        data-star class="text-2xl ">&star;</span> <span data-star_number="4" data-star
+                        class="text-2xl ">&star;</span> <span data-star_number="5" data-star
+                        class="text-2xl ">&star;</span>
+                </div>
+                <div class="text-center flex justify-center py-3 ">
+                    <a href=""
+                    class="bg-red-500 py-3 text-white text-center align-middle flex items-center rounded-xl px-10"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16" class="bg-">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                          </svg> download</a>
+                </div>
+            </div>
+
+
+            <div class="w-2/3  ">
+                <center>
+                    <div>
+                        <h3 class="text-3xl capitalize font-bold text-gray-600" style="letter-spacing: 1.4px;"
+                            data-book-title>the african triology</h3>
+                    </div>
+                </center>
+                <div class="mt-10">
+                    <ol class="text-xl text-gray-500" style="line-height: 45px;">
+                        <li> >><span class="font-bold">Number of pages: </span><span data-pages></span></li>
+                        <li>>> <span class="font-bold"> Author:</span> <span data-author></span></li>
+                        <li>>> <span class="font-bold">publisher:</span> <span data-publisher></span></li>
+                        <li>>> <span class="font-bold">subtitle:</span> <span data-subtitle></span></li>
+                        <li>>> <span class="font-bold">year:</span> <span data-year></span></li>
+                        <li>>> <span class="font-bold">Description:</span> <span data-description></span></li>
+                    </ol>
+                    <div class="text-gray-400 flex justify-around py-9">
+                        <div class="bg-white rounded-lg p-2"><span>quantity:</span> <input type="number"
+                                class="rounded-md outline-none p-2 text-center"></div>
+                        <a href=""
+                            class="bg-red-500 text-white text-center align-middle flex items-center rounded-xl px-10"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="inline bi bi-cart4" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                            </svg> add to cart</a>
+
+                    </div>
+                    <div class="bg-white p-5 w-full">
+                        <div class="flex border-b border-gray-500">
+                            <div
+                                class="text-2xl py-2 capitalize font-bold text-gray-500 px-10 mx-10 border-r border-gray-500">
+                                <a href="#rate">book rating</a>
+                            </div>
+                            <div
+                                class="text-2xl py-2 capitalize font-bold text-gray-500 px-10 mx-10 border-r border-gray-500">
+                                <a href="#review">book reviews</a>
+                            </div>
+                        </div>
+                        <div class="py-4  text-gray-500 w-full flex overflow-hidden ">
+                            <div class="min-w-full px-4" id="rate">
+                                <center>
+                                    <h3 class="text-lg font-bold">Rate the book</h3>
+                                </center>
+                                <div class="ml-2">
+                                    . Rating
+                                    <div class="text-gray-500 cursor-pointer">
+                                        Bad: <span class="text-2xl  mx-2" data-star
+                                            data-star_number="1">&star;</span><span class="text-2xl mx-2"
+                                            data-star_number="2" data-star>&star;</span> <span data-star_number="3"
+                                            data-star class="text-2xl mx-2">&star;</span> <span data-star_number="4"
+                                            data-star class="text-2xl mx-2">&star;</span> <span data-star_number="5"
+                                            data-star class="text-2xl mx-2">&star;</span> .Perfect
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="min-w-full  px-4" id="review">
+                                <center>
+                                    <h3 class="text-lg  font-bold">What Is Your View About The Book</h3>
+                                </center>
+                                <div class="font-bold text-xl">
+                                    write a view
+                                </div>
+                                <form action="" style="letter-spacing: 4px;">
+                                    <label for=""><span class="text-xs  text-red-500">*</span> <span
+                                            class="text-xs">Your
+                                            Name</span><label>
+                                            <input type="text"
+                                                class="border border-gray-300 block mt-2 w-full outline-none h-10">
+                                            <label for=""><span class="text-xs text-red-500">*</span> <span
+                                                    class="text-xs">Your Name</span><label>
+                                                    <textarea
+                                                        class="border border-gray-300 block mt-2 w-full outline-none"
+                                                        rows="7"> </textarea>
+                                                    <div class="text-right my-3 " style="letter-spacing: normal;">
+                                                        <a href=""
+                                                            class="bg-red-500 my-6 py-3 text-white text-center align-middle items-center rounded-xl px-10">continue</a>
+                                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- </div> -->
     </div>
     <script type="module" src="./javascript/script.js"></script>

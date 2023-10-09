@@ -36,3 +36,30 @@ function reslovedFunction(x) {
 function rejectedFunction(params) {
 
 }
+
+// console.log('hello');
+
+let stars = document.querySelectorAll('[data-star]')
+stars.forEach(star=>{
+    star.addEventListener('click',()=>{
+        bookRating(star,star.dataset.star_number)
+    })
+})
+
+let rating = ["very bad","bad","good","very good","perfect"]
+
+function bookRating (star,numberOfRating){
+    let arr = []
+    for (let i = 0; i < stars.length; i++) {
+        const element = stars[i];
+        if (element.dataset.star_number <= star.dataset.star_number) {
+            element.classList.add('text-yellow-500')
+
+        }else{
+            element.classList.remove('text-yellow-500')
+
+        }
+    }
+
+    
+}

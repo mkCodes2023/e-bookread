@@ -52,12 +52,17 @@
         offset: 1;
       }
     }
+
+    .edu::-webkit-scrollbar {
+      display: none;
+    }
   </style>
 </head>
 
-<body>
+<body class="bg-gray-50 overflow-x-hidden">
   <div class="">
-    <div class="flex justify-around content-center p-7 bg-zinc-200 w-full">
+    <div class="fixed w-full h-full bg top-0 left-0 z-50 bg-gray-950 opacity-90 flex justify-center items-center text-white " data-preloader>...loading</div>
+    <div class="flex justify-around content-center p-7 bg-gray-50 w-full">
       <div class="max-h-max">
         <img src="../images/images.jpeg" alt="" class="w-28 h-10" />
       </div>
@@ -93,7 +98,7 @@
           <li class="inline-block px-10 border-black relative" data-drop-down-container>
             account
             <ul
-              class="transition-all z-50 opacity-0 absolute top-16 bg-zinc-200 text-gray-700 p-5 -left-2 border border-slate-400"
+              class="transition-all z-50 opacity-0 absolute top-16 bg-zinc-200 text-gray-700 px-5 -left-2 border border-slate-400"
               data-drop-down>
               <li class="my-5 border-b-2 border-slate-400">
                 <a href="">Login</a>
@@ -101,11 +106,13 @@
               <li class="my-5 border-b-2 border-slate-400">
                 <a href="">signup</a>
               </li>
-              <li class="my-5 border-b-2 border-slate-400">
-                <a href="">cart</a>
+              <li class="my-5 border-b-2 border-slate-400 w-full">
+                <a href="" class="inline-block whitespace-nowrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline bi bi-cart4" viewBox="0 0 16 16">
+                  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                </svg> cart </a> 
               </li>
               <li class="my-5 border-b-2 border-slate-400">
-                <a href="">view Account </a>
+                <a href="" class="whitespace-nowrap">view Account </a>
               </li>
             </ul>
           </li>
@@ -152,14 +159,65 @@
           Featured Products</h3>
       </center>
 
-      <div class="grid grid-cols-4 " style="grid-row-gap: 50px;" data-featured-books>
+      <div class="grid grid-cols-4 pb-48" style="grid-row-gap: 50px; " data-featured-books>
         
 
       </div>
 
-      <div class="flex" data->
+      <div class="">
+        <center>
+          <h3
+            class="text-4xl m-12  relative after:border-2 after:border-orange-500 after:w-20 after:absolute  after:left-1/2 after:-bottom-2">
+            Educational  Books</h3>
+        </center>
 
+        <div class="flex w-full justify-between overflow-x-scroll edu" style=" height:40vh;">
+          <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
+            <img src="../images/0310962.png"
+            class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
+            <div class="font-bold">
+              hello
+            </div>
+          </div>
+          <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
+            <img src="../images/0310962.png"
+            class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
+            <div class="font-bold">
+              hello
+            </div>
+          </div>
+          <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
+            <img src="../images/0310962.png"
+            class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
+            <div class="font-bold">
+              hello
+            </div>
+          </div>
+          <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
+            <img src="../images/0310962.png"
+            class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
+            <div class="font-bold">
+              hello
+            </div>
+          </div>
+          <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
+            <img src="../images/0310962.png"
+            class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
+            <div class="font-bold">
+              hello
+            </div>
+            
+          </div>
+          <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
+            <img src="../images/0310962.png"
+            class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
+            <div class="font-bold">
+              hello
+            </div>
+            
+          </div>
       </div>
+
     </div>
 
   </div>
@@ -180,6 +238,7 @@
   </div>
 
   </template>
+
 </body>
 
 </html>
