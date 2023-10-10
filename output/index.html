@@ -37,6 +37,7 @@
       to {
         opacity: 1;
         offset: -1;
+        order:-1;
       }
     }
 
@@ -50,6 +51,7 @@
       to {
         opacity: 1;
         offset: 1;
+        order: 1;
       }
     }
 
@@ -137,19 +139,19 @@
             min-height: 24rem;
           "></div>
 
-      <div class="absolute top-52 text-black p-5 bg-white mx-5 rounded cursor-pointer">
+      <div class="absolute top-52 text-black p-5 bg-white mx-5 rounded cursor-pointer" data-slider-previous>
         <h1>
-          << /h1>
+          < </h1>
       </div>
-      <div class="absolute right-0 top-52 text-black p-5 bg-white mx-5 rounded cursor-pointer">
+      <div class="absolute right-0 top-52 text-black p-5 bg-white mx-5 rounded cursor-pointer" data-slider-next>
         <h1>></h1>
       </div>
 
       <div class="w-full absolute bottom-1 left-2/4">
-        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
-        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
-        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
-        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer bg-gray-600" data-pointer data-slider_index="0"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer" data-pointer data-slider_index="1"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer" data-pointer data-slider_index="2"></label>
+        <label class="inline-block w-4 h-4 border-white border-2 rounded-full cursor-pointer" data-pointer data-slider_index="3"></label>
       </div>
     </div>
     <div class="text-center">
@@ -159,19 +161,19 @@
           Featured Products</h3>
       </center>
 
-      <div class="grid grid-cols-4 pb-48" style="grid-row-gap: 50px; " data-featured-books>
+      <div class="grid grid-cols-4 pb-36" style="grid-row-gap: 50px; " data-featured-books>
         
 
       </div>
 
-      <div class="">
+      <div class="px-12">
         <center>
           <h3
             class="text-4xl m-12  relative after:border-2 after:border-orange-500 after:w-20 after:absolute  after:left-1/2 after:-bottom-2">
             Educational  Books</h3>
         </center>
 
-        <div class="flex w-full justify-between overflow-x-scroll edu" style=" height:40vh;">
+        <div class="flex w-full  justify-between overflow-x-scroll edu" style=" height:40vh;">
           <div style="min-width: 15%; max-width: 15%; height: 100%;" class="mx-5 p-2 bg-white">
             <img src="../images/0310962.png"
             class="w-full max-w-full " style="max-height: 70%; min-height: 70%;">
