@@ -175,5 +175,17 @@ function shuffleArray(array) {
     }
 }
 
+let educationBooksUri = "https://www.dbooks.org/api/search/educational"
+FetchBooks(educationBooksUri,educationBooksResolve,educationBooksReject)
+
+
+function educationBooksResolve (educationBooksData){
+    let eduBooks = educationBooksData
+    eduBooks = shuffleArray(eduBooks);
+
+    eduBooks.map((data,key)=>{
+        
+    })
+}
 // ************************* end of fetch section ************************************************************************
 
