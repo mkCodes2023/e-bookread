@@ -116,7 +116,7 @@ sliderPreviousButton.onclick = ()=>{
 
 //******************************** Book fetch section ****************************************************/
 // let apiLink = "https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=8b6TdVsJ9fXIxnCshkqxHGfUWCWmCTQa"
-let apiLink = /*"https://www.dbooks.org/api/recent" */"../books.json"
+let apiLink = "https://www.dbooks.org/api/recent" //"../books.json"
 FetchBooks(apiLink, reslovedFunction, rejectedFunction)
 let id
 const viewsingleBooks = (e) => {
