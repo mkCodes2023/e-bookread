@@ -8,7 +8,7 @@ let featuredBooksContainer = document.querySelector('[data-feauture-books-contai
 let Islider = document.querySelectorAll('[data-slider]');
 let sliderNextButton = document.querySelector('[data-slider-next]');
 let sliderPreviousButton = document.querySelector('[data-slider-previous]');
-
+let educationBooks = document.querySelector('[data-edcuation-book]')
 class Slider {
     constructor(slider,sliderIndex) {
         this.slider = slider
@@ -175,17 +175,70 @@ function shuffleArray(array) {
     }
 }
 
-let educationBooksUri = "https://www.dbooks.org/api/search/educational"
+//******************************************************* educational book fetch  ****************************************************************/
+let educationBooksUri = "https://www.dbooks.org/api/search/educational"/*'../books.json'*/
 FetchBooks(educationBooksUri,educationBooksResolve,educationBooksReject)
 
 
 function educationBooksResolve (educationBooksData){
-    let eduBooks = educationBooksData
-    eduBooks = shuffleArray(eduBooks);
-
+    let eduBooks = educationBooksData.books
+    shuffleArray(eduBooks);
     eduBooks.map((data,key)=>{
-        
+        let singleBooks = featuredBooksTemplate.content.cloneNode(true).children[1];
+        let image = singleBooks.querySelector('[data-image2]');
+        image.src = data.image;
+        let title = singleBooks.querySelector('[data-text-title]')
+        title.textContent  = data.title;
+        if (key < 20) {
+            educationBooks.append(singleBooks)
+        }
     })
 }
-// ************************* end of fetch section ************************************************************************
 
+function educationBooksReject(params) {
+    
+}
+
+
+// ************************* educational content fetch ************************************************************************
+
+
+// **************************************** eductional book scroller function *******************************************/
+let bookScroller = document.querySelectorAll('[data-scroller]');
+
+function bookscroller (param){
+    let theBooksContainer = document.querySelector('[data-educational-container]')
+
+    let width = theBooksContainer.getBoundingClientRect().width;
+
+    if (param == "left") {
+        educationBooks.scrollLeft += width;
+    }
+    if (param == "right") {
+        educationBooks.scrollLeft += -width
+    }
+}
+
+bookScroller.forEach((scroll)=>{
+    scroll.onclick = ()=>{
+        bookscroller(scroll.dataset.scroll)
+    }
+})
+
+educationBooks.onscroll = (e)=>{
+    let childrenElement = e.target.children
+
+    let main = educationBooks.getBoundingClientRect().width/2
+    // console.log(main);
+    for (let i = 0; i < childrenElement.length; i++) {
+        const element = childrenElement[i];
+        let left = element.getBoundingClientRect().left;
+        let width  = element.getBoundingClientRect().width;
+        if (left < main && left > main-width) {
+            element.classList.add("main")
+        }else{
+            element.classList.remove('main')
+        }
+        // console.log(left);
+    }
+}
