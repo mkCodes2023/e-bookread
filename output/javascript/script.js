@@ -15,7 +15,8 @@ function reslovedFunction(x) {
     let pusblisher = document.querySelector('[data-publisher]')
     let subtitle = document.querySelector('[data-subtitle]');
     let year = document.querySelector('[data-year]');
-    let bookImage = document.querySelector('[data-img]')
+    let bookImage = document.querySelector('[data-img]');
+    let downloadlink = document.querySelector('[data-download]')
     let books = x;
     title.forEach((titl) => {
         titl.textContent = books.title
@@ -30,6 +31,7 @@ function reslovedFunction(x) {
     subtitle.textContent = books.subtitle ? books.subtitle:"no subtitle for this book"
     year.textContent = books.year;
     bookImage.src = books.image
+    downloadlink.href = books.download
 
 }
 

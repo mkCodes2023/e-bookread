@@ -122,7 +122,9 @@ let id
 const viewsingleBooks = (e) => {
     id = e
 
-    document.location.href = "./output/singleBooks.html?id=" + id
+    document.location.href = "./singleBooks.html?id=" + id
+
+
 }
 
 
@@ -183,12 +185,14 @@ FetchBooks(educationBooksUri,educationBooksResolve,educationBooksReject)
 function educationBooksResolve (educationBooksData){
     let eduBooks = educationBooksData.books
     shuffleArray(eduBooks);
+    console.log(eduBooks);
     eduBooks.map((data,key)=>{
         let singleBooks = featuredBooksTemplate.content.cloneNode(true).children[1];
         let image = singleBooks.querySelector('[data-image2]');
         image.src = data.image;
         let title = singleBooks.querySelector('[data-text-title]')
         title.textContent  = data.title;
+        singleBooks.onclick = () => { viewsingleBooks(data.id) }
         if (key < 20) {
             educationBooks.append(singleBooks)
         }
