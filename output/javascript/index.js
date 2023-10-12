@@ -122,7 +122,7 @@ let id
 const viewsingleBooks = (e) => {
     id = e
 
-    document.location.href = "./singleBooks.html?id=" + id
+    document.location.href = "./output/singleBooks.html?id=" + id
 
 
 }
